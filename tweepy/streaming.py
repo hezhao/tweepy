@@ -120,7 +120,7 @@ class Stream(object):
                 if 'timeout' not in exception.message.lower(): # support all timeouts
                     exception = e
                     break
-                if self.listener.on_timeout() == False
+                if self.listener.on_timeout() == False:
                     break
                 if self.running is False:
                     break
