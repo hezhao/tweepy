@@ -10,6 +10,7 @@ from time import sleep
 from tweepy.models import Status
 from tweepy.api import API
 from tweepy.error import TweepError
+from ssl import SSLError
 
 from tweepy.utils import import_simplejson, urlencode_noplus
 json = import_simplejson()
