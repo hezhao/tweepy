@@ -118,7 +118,7 @@ class Stream(object):
                     self._read_loop(resp)
             # add SSLError handling
             except SSLError, e:
-                if 'timed out' not in str(exc.args[0]): # e.message.lower(): # support all timeouts
+                if 'timed out' not in str(e.args[0]): # e.message.lower(): # support all timeouts
                     exception = e
                     break
                 if self.listener.on_timeout() == False:
